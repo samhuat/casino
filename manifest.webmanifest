@@ -1,0 +1,21 @@
+{
+ "name": "Sam Huat Casino II",
+ "short_name": "Casino",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#0a0806",
+ "theme_color": "#0a0806",
+ "icons": [
+  {
+   "src": "icon180.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icon512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
