@@ -1,6 +1,6 @@
 {
  "name": "Sam Huat Casino II",
- "short_name": "Sam_Huat_Casino",
+ "short_name": "SamHuatCasino",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
