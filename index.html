@@ -710,15 +710,18 @@ button.purple{background:linear-gradient(#9a1e9a,#4a0a4a)}button.gold{background
 .vk-btns .spin { flex: 2; }
 body.app .vkpoker .dg-rule label { cursor: pointer; }
 /* the phone held sideways (body.app.land, parts/land.css): the pay table and the cards on the left, the buttons on the right */
-body.app.land #view > .slot > .vk-main { grid-column: 1; grid-row: 1 / -1; align-self: center; width: 100%; margin: 0; gap: 6px; }
-body.app.land .vkpoker .vk-pt { font-size: 10px; }
-body.app.land .vkpoker .vk-pt td { padding: 0 5px; }
-body.app.land .vkpoker .vk-face { max-width: 92px; }
-body.app.land .vkpoker .vk-hold { padding: 2px 0; font-size: 11px; height: 30px; }
+body.app.land #view > .slot > .vk-main { grid-column: 1; grid-row: 1 / -1; width: 100%; margin: 0; align-self: stretch; height: var(--lh); justify-content: space-between; gap: 4px; }
+/* App 2.8: the pay table, the cards and the buttons fill the phone's screen (the cards sized from the height that is left) */
+body.app.land .vkpoker .vk-pt { font-size: 17px; }
+body.app.land .vkpoker .vk-pt td { padding: 1px 10px; line-height: 1.25; }
+body.app.land .vkpoker .vk-play { flex: 1; justify-content: center; gap: 4px; }
+body.app.land .vkpoker .vk-dbltitle { font-size: 24px; }
+body.app.land .vkpoker .vk-face { max-width: none; width: min(100%, calc((var(--lh) - 300px) * .69)); }
+body.app.land .vkpoker .vk-hold { max-width: none; width: min(100%, calc((var(--lh) - 300px) * .69)); height: 42px; padding: 2px 0; font-size: 15px; }
 body.app.land .vkpoker .vk-games button { padding: 4px 8px; font-size: 10px; }
 body.app.land .vkpoker .vk-btns { flex-wrap: wrap; }
-body.app.land .vkpoker .vk-btns button { flex: 1 1 30%; height: 48px; font-size: 14px; }
-body.app.land .vkpoker .vk-btns .spin { flex: 1 1 100%; height: 56px; }
+body.app.land .vkpoker .vk-btns button { flex: 1 1 30%; height: 60px; font-size: 16px; }
+body.app.land .vkpoker .vk-btns .spin { flex: 1 1 100%; height: 72px; font-size: 18px; }
 body.app.land #view > .slot.vkpoker > p.vk-opt { display: block; font-size: 11px; }
 
 /* ---- the app on this device: nothing about the board ---- */
@@ -5539,7 +5542,14 @@ function dgstats(g) {   // C2 Phase 12
 
 <script>/* the internet copy: keep the whole casino on this device, so it starts with no internet */
 if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
-  addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  var shcHad = !!navigator.serviceWorker.controller, shcT = Date.now(), shcDone = false;
+  /* a new version came in: show it at once if the app was only just opened (never in the middle of a game) */
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (shcHad && !shcDone && Date.now() - shcT < 30000) { shcDone = true; location.reload(); } });
+  addEventListener("load", function () { navigator.serviceWorker.register("sw.js", {updateViaCache: "none"}).then(function (r) {
+    /* look for a new version every time the app comes back to the screen */
+    document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") { shcT = Date.now(); try { r.update(); } catch (e) {} } });
+  }).catch(function () {}); });
   try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
 }</script>
 </body>
