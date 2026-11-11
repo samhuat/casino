@@ -1,5 +1,5 @@
-/* Sam Huat Casino II - keeps the casino on this device (version a2f433bc8d) */
-const CACHE = 'shc-a2f433bc8d';
+/* Sam Huat Casino II - keeps the casino on this device (version 288c917085) */
+const CACHE = 'shc-288c917085';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon180.png', './icon512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
