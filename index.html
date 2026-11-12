@@ -1061,6 +1061,73 @@ body.app.land .sl-pay img { height: 18px; }
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="SamHuatCasino">
+<style>
+/* ---- App 3.3 (the app only): CASINO WAR (ids "cw-") ---- */
+.mc-war { background: radial-gradient(#2a8a55, #062a16) !important; border-color: #ff9a4a !important; }
+.slot.war { display: grid; grid-template-columns: minmax(0, 1fr) 290px; grid-auto-rows: min-content; column-gap: 12px; row-gap: 7px; max-width: 1100px; align-items: start; }
+.slot.war > * { grid-column: 2; min-width: 0; }
+.slot.war > .cw-felt { grid-column: 1; grid-row: 1 / span 20; height: 620px; }
+.slot.war .sl-title { font-size: 24px; }
+.cw-felt { position: relative; background: radial-gradient(ellipse at 50% 30%, #2a8a55, #0b4526 62%, #062a16 100%); border: 10px solid #3a1d0e; outline: 2px solid #e8c870; border-radius: 150px 150px 18px 18px; box-shadow: inset 0 0 40px #000a, 0 0 0 4px #5a3018; padding: 14px 22px 32px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; overflow: hidden; }
+.cw-arc { font: 700 15px Georgia, serif; letter-spacing: 4px; color: #f3d98a; text-align: center; text-shadow: 0 1px 2px #000; }
+.cw-arc small { display: block; font: 400 11px Arial; letter-spacing: 2px; color: #e8d7a0; opacity: .85; margin-top: 3px; }
+.cw-shoe { position: absolute; right: 26px; top: 64px; font: 400 10px Arial; color: #e8d7a0; text-align: center; letter-spacing: 1px; }
+.cw-shoe i { display: block; width: 54px; height: 40px; background: linear-gradient(#5a3018, #2a140a); border: 1px solid #e8c870; border-radius: 4px 14px 4px 4px; margin: 0 auto 3px; }
+.cw-spot { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.cw-lab { font: 700 12px Arial; letter-spacing: 3px; color: #ffe9a0; text-align: center; }
+.cw-row { display: flex; gap: 12px; align-items: center; justify-content: center; min-height: 122px; }
+.cw-c { width: 84px; height: 122px; border-radius: 7px; box-shadow: 0 4px 8px #000b; background: #fff; flex: 0 0 auto; }
+.cw-c svg { width: 100%; height: 100%; display: block; }
+.cw-c.win { box-shadow: 0 0 0 3px #ffe07a, 0 0 18px #ffd65a; }
+.cw-c.lose { filter: brightness(.68); }
+.cw-c.deal { animation: cwdeal .35s ease-out both; } @keyframes cwdeal { from { transform: translateY(-60px) rotate(-10deg); opacity: 0; } }
+.cw-slot { width: 84px; height: 122px; border-radius: 7px; border: 2px dashed #ffffff40; box-sizing: border-box; flex: 0 0 auto; }
+.cw-burn { display: flex; align-items: center; }
+.cw-burn .cw-c { width: 46px; height: 67px; margin-left: -26px; } .cw-burn .cw-c:first-child { margin-left: 0; }
+.cw-mid { display: flex; flex-direction: column; align-items: center; gap: 6px; min-height: 64px; justify-content: center; text-align: center; }
+.cw-banner { font: 900 34px Georgia, serif; letter-spacing: 5px; color: #ffe07a; text-shadow: 0 0 12px #ff9a2a, 0 2px 0 #7a3a00; }
+.cw-banner.lost { color: #ffb0a0; text-shadow: 0 2px 0 #4a0a0a; font-size: 28px; }
+.cw-banner.even { color: #fff; text-shadow: 0 2px 0 #000; font-size: 28px; }
+.cw-banner.pop { animation: cwpop .5s ease-out both; } @keyframes cwpop { from { transform: scale(.4); opacity: 0; } 70% { transform: scale(1.12); } }
+.cw-sub { font: 700 12px Arial; letter-spacing: 1.5px; color: #fff; }
+.cw-circles { display: flex; gap: 40px; justify-content: center; align-items: center; }
+.cw-circ { width: 104px; height: 104px; border-radius: 50%; border: 2px solid #f3d98a; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f3d98a; font: 700 13px Arial; letter-spacing: 2px; background: #0004; position: relative; }
+.cw-circ small { font: 400 10px Arial; letter-spacing: 1px; color: #e8d7a0; margin-top: 2px; }
+.cw-circ.tie { width: 84px; height: 84px; border-style: dashed; }
+.cw-circ.raise { border-color: #ff8a4a; color: #ffb07a; }
+.cw-circ.hot { box-shadow: 0 0 14px #ffd65a; }
+.cw-chip { position: absolute; bottom: -24px; width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(#2fa35a 45%, #1a6a38 46%); border: 4px dashed #fff; box-shadow: 0 3px 6px #000a; color: #fff; font: 700 11px Arial; display: flex; align-items: center; justify-content: center; }
+.cw-chip.red { background: radial-gradient(#d8343a 45%, #8a1418 46%); }
+.cw-chip.org { background: radial-gradient(#e8742a 45%, #a83a0a 46%); }
+.cw-help { font: 12px Arial; color: #c8c0a8; line-height: 17px; background: #14110c; border: 1px solid #3a3020; border-radius: 8px; padding: 8px 10px; }
+.slot.war .cw-msg { height: auto; min-height: 36px; line-height: 18px; font-size: 13px; }
+.cw-info { gap: 6px; } .cw-info > * { padding: 7px 12px; } .cw-info .dg-pm { flex: 0 0 48px; padding: 0; }
+.cw-info .cw-bl { flex: 0 0 34px; padding: 0; font: 700 11px Arial; letter-spacing: 1px; color: #e8d7a0; align-self: center; }
+.cw-q { background: #1a0f05; border: 1px solid #e8c870; border-radius: 10px; padding: 9px 10px; text-align: center; }
+.cw-q b { color: #ffe07a; font: 700 15px Georgia, serif; letter-spacing: 1px; }
+.cw-q p { margin: 4px 0 0; font: 12px Arial; color: #e9e2cf; line-height: 16px; }
+.cw-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.cw-btns button { padding: 0; height: 58px; font-size: 15px; letter-spacing: 1px; }
+.slot.war .cw-go button { height: 58px; font-size: 18px; }
+.slot.war button.cw-warbtn { background: linear-gradient(#e8742a, #a83a0a); color: #fff; border-color: #ffc07a; }
+.slot.war .hide { display: none !important; }
+@media (orientation: portrait) {
+  body.app .slot.war { display: flex; flex-direction: column; align-items: stretch; }
+  body.app .slot.war > .cw-felt { order: 2; height: 600px; } body.app .slot.war > .sl-head { order: 1; } body.app .slot.war > * { order: 3; }
+  body.app .slot.war .cw-help { display: none; }
+}
+body.app.land #view > .slot.war { grid-template-columns: minmax(0, 1fr) 300px; }
+body.app.land #view > .slot > .cw-felt { grid-column: 1; grid-row: 1 / -1; width: 100%; margin: 0; align-self: stretch; height: var(--lh); border-radius: 110px 110px 16px 16px; }
+body.app.land .slot.war .cw-help { display: none; }
+body.app.land .slot.war .cw-c, body.app.land .slot.war .cw-slot { width: 72px; height: 104px; } body.app.land .slot.war .cw-row { min-height: 104px; }
+body.app.land .slot.war .cw-burn .cw-c { width: 40px; height: 58px; }
+body.app.land .slot.war .cw-circ { width: 84px; height: 84px; } body.app.land .slot.war .cw-circ.tie { width: 70px; height: 70px; }
+body.app.land .slot.war .cw-go button, body.app.land .slot.war .cw-btns button { height: 64px; }
+/* the seat picker */
+.cw-pick .seatcard h3 { margin: 0 0 6px; }
+.slot.war .cw-info { flex-wrap: nowrap; } .slot.war .cw-info .betbox { flex: 1 1 auto; min-width: 0; }
+body.app.land .slot.war .cw-info { flex-wrap: nowrap; } body.app.land .slot.war .cw-info .dg-pm { flex: 0 0 44px; }
+</style>
 </head>
 <body class="app appgames">
 
@@ -2011,6 +2078,7 @@ $('#seat-btn').onclick = comeIn;
    ============================================================================= */
 let view = '';
 function render(s) {
+  if (window.cwOn) return;   // App 3.3: CASINO WAR is on the screen (it runs on this page)
   const v = $('#view');
   if ('music' in s) musicPref = !!s.music;   // C2 13: the MUSIC switch also covers the slot machines
   const scr = s.screen;
@@ -3958,7 +4026,7 @@ function pwstats(g) {   // C2 Phase 24
 }
 const GAMES = [
   {name: 'SLOTS', sub: 'Classic 777 &middot; HUAT AH! &middot; DRAGON &middot; WHEEL &middot; OX &middot; DRUMS', pic: '<img src="img/slot_SEVEN.png" class="g7 two"><img src="img/vs_WILD.png" class="gw"><img src="img/slot_CHERRY.png" class="gc l"><img src="img/slot_CHERRY.png" class="gc r">'},
-  {name: 'BLACKJACK', sub: '&amp; Baccarat', pic: `<span class="pcard">${cardSvg(0)}</span><span class="pcard">${cardSvg(12)}</span>`},
+  {name: 'BLACKJACK', sub: 'Baccarat &middot; Casino War', pic: `<span class="pcard">${cardSvg(0)}</span><span class="pcard">${cardSvg(12)}</span>`},
   {name: 'POKER', sub: '3 tables', pic: `<span class="pcard">${cardSvg(24)}</span><span class="pcard">${cardSvg(25)}</span><span class="pcard">${cardSvg(13)}</span>`},
   {name: 'ROULETTE', sub: '&amp; Craps', pic: `${WHEEL_PIC}<span class="lb-dice"><i>&#9860;</i><i>&#9858;</i></span>`},
 ];
@@ -3974,9 +4042,10 @@ const FAMILY = [
     {g: 13, pics: '<img src="img/pg_PIGGY3.png"><img src="img/pg_COIN_GRAND.png">', name: 'PIGGY BANK BLAST', sub: '3 reels &middot; piggy banks &middot; blast bonus', lux: 'mc-piggy', app: true},
     {g: 14, pics: '<img src="img/gc_RUBY.png"><img src="img/gc_WILD.png">', name: 'GEM CASCADE', sub: 'clusters &middot; cascades &middot; ladder x30', lux: 'mc-gems', app: true},
     {g: 15, pics: '<img src="img/ct_WILD.png"><img src="img/ct_LIFT.png">', name: 'CASH TOWER', sub: '25 lines &middot; tower climb &middot; 4 jackpots', lux: 'mc-tower', app: true}]},   // C2 Phase 17: the app only
-  {title: 'CHOOSE A TABLE', note: 'Both tables deal from a shoe.', tiles: [
+  {title: 'CHOOSE A TABLE', note: 'Both tables deal from a shoe.', noteApp: 'Every table deals from a shoe.', tiles: [
     {g: 6, pics: `<span class="pcard">${cardSvg(0)}</span><span class="pcard">${cardSvg(12)}</span>`, name: 'BLACKJACK', sub: '6 decks &middot; 3 to 2 &middot; side bets', lux: 'mc-navy'},
-    {g: 1, pics: `<span class="pcard">${cardSvg(8)}</span><span class="pcard">${cardSvg(25)}</span>`, name: 'BACCARAT', sub: 'Punto Banco &middot; 8 decks'}]},
+    {g: 1, pics: `<span class="pcard">${cardSvg(8)}</span><span class="pcard">${cardSvg(25)}</span>`, name: 'BACCARAT', sub: 'Punto Banco &middot; 8 decks'},
+    {g: 'war', pics: `<span class="pcard">${cardSvg(12)}</span><span class="pcard">${cardSvg(26)}</span>`, name: 'CASINO WAR', sub: 'high card wins &middot; go to war &middot; tie 10 to 1', lux: 'mc-war', app: true}]},   // App 3.3: the app only
   {title: 'CHOOSE A POKER TABLE', note: 'Every hand from a sealed deck.', tiles: [
     {g: 2, pics: `<span class="pcard">${cardSvg(24)}</span><span class="pcard">${cardSvg(25)}</span>`, name: 'THREE CARD', sub: 'ante &middot; pair plus'},
     {g: 3, pics: `<span class="pcard">${cardSvg(0)}</span><span class="pcard">${cardSvg(13)}</span>`, name: "TEXAS HOLD'EM", sub: 'no-limit &middot; 1-5 players'},
@@ -4035,7 +4104,7 @@ function chooseFamily(k) {
       ${tiles.map(t => `<button class="mc ${t.lux || ''}" data-g="${t.g}"><div class="mc-pics">${t.pics}</div><b>${t.name}</b><span>${t.sub}</span></button>`).join('')}</div>
     <p class="muted small">${f.noteApp && document.body.classList.contains('appgames') ? f.noteApp : f.note}</p><button class="grey" id="mc-back">BACK</button></div>`;
   document.body.appendChild(o);
-  o.querySelectorAll('.mc').forEach(b => b.onclick = () => { if (+b.dataset.g < 0) { toast('Craps - coming soon'); return; } o.remove(); send({do: 'lobbygame', level: +b.dataset.g}); });
+  o.querySelectorAll('.mc').forEach(b => b.onclick = () => { if (b.dataset.g === 'war') { o.remove(); cwOpen(); return; } if (+b.dataset.g < 0) { toast('Craps - coming soon'); return; } o.remove(); send({do: 'lobbygame', level: +b.dataset.g}); });
   $('#mc-back').onclick = () => o.remove();
 }
 const chooseMachine = () => chooseFamily(0);
@@ -5998,7 +6067,7 @@ async function loadPlayers() {
         <span>Net result</span><span>${net > 0 ? '+' : ''}${money(net)}</span>
         <span>Biggest win</span><span>${money(s.biggestWin)}</span>
         <span>Best winning run</span><span>${s.bestRun}</span>
-        <span>Progressive jackpots</span><span>${s.jackpots ? '&#9733; ' + s.jackpots : '0'}</span></div>${vstats(p.vslot)}${bstats(p.baccarat)}${tstats(p.threecard)}${hstats(p.holdem)}${ustats(p.uth)}${bjstats(p.bj)}${rlstats(p.rl)}${crstats(p.cr)}${dgstats(p.dg)}${fwstats(p.fw)}${gxstats(p.gx)}${ldstats(p.ld)}${pgstats(p.pg)}${gcstats(p.gc)}${twstats(p.ct)}${vkstats(p.vp)}${sbstats(p.sb)}${knstats(p.kn)}${b6stats(p.bw)}${pwstats(p.pw)}${vipStats(p, d)}</div>`;
+        <span>Progressive jackpots</span><span>${s.jackpots ? '&#9733; ' + s.jackpots : '0'}</span></div>${vstats(p.vslot)}${bstats(p.baccarat)}${tstats(p.threecard)}${hstats(p.holdem)}${ustats(p.uth)}${bjstats(p.bj)}${rlstats(p.rl)}${crstats(p.cr)}${dgstats(p.dg)}${fwstats(p.fw)}${gxstats(p.gx)}${ldstats(p.ld)}${pgstats(p.pg)}${gcstats(p.gc)}${twstats(p.ct)}${vkstats(p.vp)}${sbstats(p.sb)}${knstats(p.kn)}${b6stats(p.bw)}${pwstats(p.pw)}${typeof cwstats === 'function' ? cwstats(p) : ''}${vipStats(p, d)}</div>`;
   }).join('');
 }
 setInterval(() => { if ($('#tab-stats').classList.contains('on')) loadPlayers(); }, 15000);
@@ -6387,5 +6456,373 @@ if ("serviceWorker" in navigator && (location.protocol === "https:" || location.
   }).catch(function () {}); });
   try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
 }</script>
+<script>
+/* =============================================================================
+   App 3.3 (the app only): CASINO WAR - one card each, high card wins (aces high).
+   A tie: GO TO WAR (raise the same again; 3 cards burned, one more card each) or
+   SURRENDER (half the bet back). TIE bet 10 to 1; a tie in the war pays the raise 2 to 1.
+   6 decks, reshuffled when fewer than 78 cards are left. The game runs on this page;
+   the players and their money are the casino engine's own (the bank is changed
+   through the engine's backup / restore, the same as LOAD A BACKUP FILE).
+   Statistics are kept in this browser and go into SAVE A BACKUP FILE. (DOM ids "cw-")
+   ============================================================================= */
+(function () {
+  'use strict';
+  const KEY = 'shc_war_v1', DECKS = 6, CUT = 78;
+  const BETS = [500, 1000, 2500, 5000, 10000, 20000, 50000];          // cents: $5 .. $500
+  const TIES = [0, 100, 500, 1000, 2500, 5000, 10000];                 // $0 .. $100
+  const RANK = ['', '', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king', 'ace'];
+  const RANKS = ['', '', 'twos', 'threes', 'fours', 'fives', 'sixes', 'sevens', 'eights', 'nines', 'tens', 'jacks', 'queens', 'kings', 'aces'];
+  const E0 = {backup: CasinoEngine.backup, restore: CasinoEngine.restore};   // the engine's own
+  const val = c => (c % 13 === 0 ? 14 : c % 13 + 1);                     // 2..14, aces high
+
+  /* ---------- this browser's record: statistics per seat, a hand left open ---------- */
+  function load() { try { const o = JSON.parse(localStorage.getItem(KEY) || '{}'); o.seats = o.seats || {}; return o; } catch (e) { return {seats: {}}; } }
+  function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  const blank = name => ({name, hands: 0, won: 0, lost: 0, ties: 0, wars: 0, warsWon: 0, warTies: 0, surrenders: 0, tieWins: 0,
+    wagered: 0, returned: 0, biggest: 0, streak: 0, bestStreak: 0, bet: 2500, tie: 0});
+  function statsFor(seat, name) {
+    const o = load(); let g = o.seats[seat];
+    if (!g || g.name !== name) { g = blank(name); o.seats[seat] = g; save(o); }
+    return Object.assign(blank(name), g);
+  }
+  function putStats(seat, g) { const o = load(); o.seats[seat] = g; save(o); }
+
+  /* SAVE A BACKUP FILE / LOAD A BACKUP FILE carry the Casino War statistics too */
+  CasinoEngine.backup = function () {
+    const t = E0.backup();
+    try { const o = JSON.parse(t); o.casinoWar = load().seats; return JSON.stringify(o); } catch (e) { return t; }
+  };
+  CasinoEngine.restore = function (text) {
+    let war = null; try { war = JSON.parse(text).casinoWar || null; } catch (e) {}
+    const r = E0.restore(text);
+    if (/^Restored/.test(r) && war && typeof war === 'object') { const o = load(); o.seats = war; delete o.pending; save(o); }
+    return r;
+  };
+
+  /* ---------- the money: the engine's own player record ---------- */
+  function player(seat) {
+    try { return (CasinoEngine.players().players || []).find(p => p.seat === seat && p.used) || null; } catch (e) { return null; }
+  }
+  function bank(seat, name, delta, rebuy) {   // add delta (cents) to the bank; returns the new bank, or throws
+    const o = JSON.parse(E0.backup());
+    const p = (o.players || []).find(x => x.seat === seat);
+    if (!p || !p.used || p.name !== name) throw new Error('This player is not at the casino any more.');
+    if (p.bank + delta < 0) throw new Error('Not enough credit.');
+    p.bank += delta;
+    if (rebuy) p.rebuys = (p.rebuys || 0) + 1;
+    const r = E0.restore(JSON.stringify(o));
+    if (!/^Restored/.test(r)) throw new Error(r || 'The casino did not take the change.');
+    return p.bank;
+  }
+  function pending(p) { const o = load(); if (p) o.pending = p; else delete o.pending; save(o); }
+  /* a hand left in the middle of a tie (page closed): it is surrendered - half the bet comes back */
+  function settleLeftover() {
+    const o = load(), p = o.pending; if (!p) return;
+    const back = p.war ? p.bet * 1.5 : p.bet / 2;   // closed in the middle of a war: the raise comes back too
+    try { if (player(p.seat) && player(p.seat).name === p.name) bank(p.seat, p.name, back); } catch (e) {}
+    const g = o.seats[p.seat];
+    if (g && g.name === p.name) { g.surrenders++; g.lost++; g.streak = 0; g.returned += back; }
+    delete o.pending; save(o);
+  }
+  (function waitEngine(n) {
+    try { CasinoEngine.players(); settleLeftover(); } catch (e) { if (n < 60) setTimeout(() => waitEngine(n + 1), 500); }
+  })(0);
+
+  /* ---------- the shoe ---------- */
+  function rnd(n) { const a = new Uint32Array(1), lim = Math.floor(4294967296 / n) * n; let x; do { crypto.getRandomValues(a); x = a[0]; } while (x >= lim); return x % n; }
+  function newShoe() {
+    const s = []; for (let d = 0; d < DECKS; d++) for (let c = 0; c < 52; c++) s.push(c);
+    for (let i = s.length - 1; i > 0; i--) { const j = rnd(i + 1); [s[i], s[j]] = [s[j], s[i]]; }
+    return s;
+  }
+
+  /* ---------- sounds: a drum roll for the war, the casino's own for the rest ---------- */
+  function drumroll() {
+    if (!amSpeaker() || !opt.fx) return;
+    for (let i = 0; i < 26; i++) { const t = 1.3 * Math.pow(i / 26, 0.8); noise(0.06, 180 + 40 * (i % 2), 1.4, 0.12 + 0.18 * i / 26, t); }
+    noise(0.35, 120, 0.8, 0.5, 1.38); tone(98, 0.5, 0.18, 1.38);
+  }
+
+  let cw = null;   // the table: {seat, name, g, shoe, state, pc, dc, wpc, wdc, burn, raise, out, busy, b0, t0}
+  const W = window;
+
+  function enterSeatPick() {
+    musicStop();
+    if ($('#mc-over')) $('#mc-over').remove();
+    W.cwOn = true; view = 'warpick';
+    const v = $('#view'); let d;
+    try { d = CasinoEngine.players(); } catch (e) { toast('The casino is still starting - try again in a moment.'); return leave(); }
+    const nb = (d.achList || []).length || 34;
+    v.innerHTML = `<div class="pick cw-pick"><div class="pick-head"><button class="grey" id="cwp-lobby">&#9664; LOBBY</button>
+      <h2>CHOOSE YOUR SEAT</h2><span class="muted">CASINO WAR</span></div>
+      <div class="seats">${d.players.map(p => {
+        if (!p.used) return `<div class="seatcard empty" data-s="${p.seat}"><h3>+ NEW PLAYER</h3><div class="muted small">Click to take this seat ($1,000 to start)</div></div>`;
+        const g = statsFor(p.seat, p.name), net = g.returned - g.wagered, vip = p.vip || {};
+        return `<div class="seatcard" data-s="${p.seat}"><h3>${esc(p.name)} <span class="vippill v${vip.level || 0}">${esc(vip.name || 'BRONZE')} &middot; ${vip.ach || 0}/${nb}</span></h3><div class="bank">Bank ${money(p.bank)}</div>
+          <div class="muted small">${g.hands ? `Casino War: ${g.hands} hands &middot; ${net >= 0 ? '+' : '-'}${money(Math.abs(net))}` : 'New to Casino War &middot; good luck!'}</div>
+          <div class="seatbtns"><button class="sit" data-s="${p.seat}">PLAY</button></div></div>`;
+      }).join('')}</div></div>`;
+    $('#cwp-lobby').onclick = leave;
+    v.querySelectorAll('.sit').forEach(b => b.onclick = () => sit(+b.dataset.s));
+    v.querySelectorAll('.seatcard.empty').forEach(b => b.onclick = () => {
+      shcPrompt('Name of the new player:').then(n => { if (!n) return; send({do: 'create', seat: +b.dataset.s, name: n}); setTimeout(enterSeatPick, 400); });
+    });
+  }
+
+  function sit(seat) {
+    const p = player(seat); if (!p) return enterSeatPick();
+    const g = statsFor(seat, p.name);
+    cw = {seat, name: p.name, g, shoe: newShoe(), state: 'bet', pc: null, dc: null, wpc: null, wdc: null, burn: false, raise: 0,
+      out: null, busy: false, b0: p.bank, t0: Date.now(), msg: ''};
+    if (!BETS.includes(g.bet)) g.bet = 2500; if (!TIES.includes(g.tie)) g.tie = 0;
+    build(); show();
+    speak(`Welcome to Casino War, ${p.name}. High card wins. Place your bet.`);
+  }
+
+  function build() {
+    view = 'war';
+    $('#view').innerHTML = `<div class="slot war">
+      <div class="cw-felt" id="cw-felt">
+        <div class="cw-arc">CASINO WAR<small>HIGH CARD WINS &middot; TIE PAYS 10 TO 1 &middot; ${DECKS} DECKS</small></div>
+        <div class="cw-shoe"><i></i><span id="cw-shoe"></span></div>
+        <div class="cw-spot"><div class="cw-lab">DEALER</div><div class="cw-row" id="cw-drow"></div></div>
+        <div class="cw-mid" id="cw-mid"></div>
+        <div class="cw-spot"><div class="cw-row" id="cw-prow"></div><div class="cw-lab" id="cw-pname"></div></div>
+        <div class="cw-circles"><div class="cw-circ" id="cw-cbet">BET<small>1 TO 1</small></div>
+          <div class="cw-circ tie" id="cw-ctie">TIE<small>10 TO 1</small></div>
+          <div class="cw-circ raise" id="cw-craise">WAR<small>RAISE</small></div></div>
+      </div>
+      <div class="sl-head"><button class="grey" id="cw-lobby">&#9664; LOBBY</button><div><div class="sl-title">CASINO WAR</div><div class="sl-player" id="cw-player"></div></div></div>
+      <div class="dg-msg cw-msg" id="cw-toast"></div>
+      <div class="cw-help">You and the dealer each get <b>one card</b> &mdash; the higher card wins 1 to 1 (aces high). On a <b>tie</b>: <b>GO TO WAR</b> (raise the same again &mdash; win and the raise pays 1 to 1, another tie pays it 2 to 1, and your bet comes back) or <b>SURRENDER</b> and get half back. The <b>TIE</b> bet pays 10 to 1.</div>
+      <div class="vs-info cw-info"><div class="credit" id="cw-credit"></div></div>
+      <div class="vs-info cw-info" id="cw-brow"><span class="cw-bl">BET</span><div class="betbox" id="cw-bet"></div><button class="grey dg-pm" id="cw-bminus">&minus;</button><button class="grey dg-pm" id="cw-bplus">+</button></div>
+      <div class="vs-info cw-info" id="cw-trow"><span class="cw-bl">TIE</span><div class="betbox" id="cw-tie"></div><button class="grey dg-pm" id="cw-tminus">&minus;</button><button class="grey dg-pm" id="cw-tplus">+</button></div>
+      <div class="cw-q hide" id="cw-q"></div>
+      <div class="cw-btns hide" id="cw-tiebtns"><button class="grey" id="cw-surr">SURRENDER</button><button class="spin cw-warbtn" id="cw-war">GO TO WAR!</button></div>
+      <div class="sl-btns cw-go" id="cw-gorow"><button class="spin" id="cw-go">DEAL</button></div></div>`;
+    $('#cw-lobby').onclick = () => {
+      if (cw.busy) return;
+      if (cw.state === 'tie') { shcConfirm('Leave CASINO WAR? This tie is surrendered - half your bet comes back.').then(ok => { if (ok) { surrender(true); } }); return; }
+      leave(true);
+    };
+    const step = (list, k, d) => { const i = list.indexOf(cw.g[k]); cw.g[k] = list[Math.max(0, Math.min(list.length - 1, i + d))]; putStats(cw.seat, cw.g); playFx('chip'); show(); };
+    $('#cw-bminus').onclick = () => { if (cw.state !== 'tie' && !cw.busy) step(BETS, 'bet', -1); };
+    $('#cw-bplus').onclick = () => { if (cw.state !== 'tie' && !cw.busy) step(BETS, 'bet', 1); };
+    $('#cw-tminus').onclick = () => { if (cw.state !== 'tie' && !cw.busy) step(TIES, 'tie', -1); };
+    $('#cw-tplus').onclick = () => { if (cw.state !== 'tie' && !cw.busy) step(TIES, 'tie', 1); };
+    $('#cw-go').onclick = deal;
+    $('#cw-war').onclick = goWar;
+    $('#cw-surr').onclick = () => surrender(false);
+  }
+
+  const card = (c, cls) => `<div class="cw-c ${cls || ''}">${cardSvg(c)}</div>`;
+  const slot = () => '<div class="cw-slot"></div>';
+  const chip = (amt, cls) => amt ? `<div class="cw-chip ${cls || ''}">${amt >= 100000 ? '$' + amt / 100000 + 'K' : money(amt)}</div>` : '';
+  function bankNow() { const p = player(cw.seat); return p ? p.bank : 0; }
+
+  function show(anim) {
+    if (!cw || view !== 'war') return;
+    const a = anim || {}, out = cw.out || {};
+    const row = (first, burn, war, who) => {
+      if (first === null) return slot();
+      const r1 = out.done && cw.wpc === null ? (out[who] ? 'win' : out.tieBoth ? '' : 'lose') : cw.wpc !== null ? 'lose' : '';
+      let h = card(first, (a.first === who ? 'deal ' : '') + (out.done ? r1 : ''));
+      if (cw.burn) h += `<div class="cw-burn">${[0, 1, 2].map(() => card(-1, a.burn ? 'deal' : '')).join('')}</div>`;
+      if (war !== null) h += card(war, (a.war === who ? 'deal ' : '') + (out.done ? (out[who] ? 'win' : out.warTie ? 'win' : 'lose') : ''));
+      else if (cw.burn) h += slot();
+      return h;
+    };
+    $('#cw-drow').innerHTML = row(cw.dc, cw.burn, cw.wdc, 'd');
+    $('#cw-prow').innerHTML = row(cw.pc, cw.burn, cw.wpc, 'p');
+    $('#cw-pname').textContent = cw.name; $('#cw-player').textContent = cw.name;
+    $('#cw-shoe').textContent = `SHOE ${cw.shoe.length}`;
+    const live = cw.state === 'tie' || cw.busy || cw.state === 'done';
+    const betShown = cw.state === 'bet' ? cw.g.bet : cw.hand ? cw.hand.bet : cw.g.bet, tieShown = cw.state === 'bet' ? cw.g.tie : cw.hand ? cw.hand.tie : cw.g.tie;
+    $('#cw-cbet').innerHTML = `BET<small>1 TO 1</small>${chip(betShown)}`;
+    $('#cw-ctie').innerHTML = `TIE<small>10 TO 1</small>${chip(tieShown, 'red')}`;
+    $('#cw-craise').innerHTML = `WAR<small>RAISE</small>${chip(cw.raise, 'org')}`;
+    $('#cw-craise').classList.toggle('hot', cw.state === 'tie');
+    $('#cw-ctie').classList.toggle('hot', !!(cw.hand && cw.hand.tieWon && live));
+    $('#cw-mid').innerHTML = cw.banner ? `<div class="cw-banner ${cw.banner.cls || ''} pop">${cw.banner.big}</div><div class="cw-sub">${cw.banner.sub || ''}</div>` : '';
+    $('#cw-credit').innerHTML = `CREDIT &nbsp; ${money(bankNow())}`;
+    $('#cw-bet').textContent = money(cw.g.bet); $('#cw-tie').textContent = cw.g.tie ? money(cw.g.tie) : 'NONE';
+    $('#cw-toast').textContent = cw.msg || '';
+    const tie = cw.state === 'tie';
+    if (tie !== cw.shownTie) { cw.shownTie = tie; setTimeout(() => dispatchEvent(new Event('resize')), 0); }   // the buttons changed: fit the screen again
+    $('#cw-q').classList.toggle('hide', !tie); $('#cw-tiebtns').classList.toggle('hide', !tie); $('#cw-gorow').classList.toggle('hide', tie);
+    ['#cw-bminus', '#cw-bplus', '#cw-tminus', '#cw-tplus'].forEach(id => { $(id).disabled = tie || cw.busy; });
+    if (tie) {
+      const b = cw.hand.bet, can = bankNow() >= b;
+      $('#cw-q').innerHTML = `<b>IT'S A TIE &mdash; GO TO WAR?</b><p>${can ? `GO TO WAR adds another ${money(b)}.` : `Not enough credit for the war raise (${money(b)}).`} SURRENDER gives back half your bet (${money(b / 2)}).</p>`;
+      $('#cw-war').disabled = !can || cw.busy; $('#cw-surr').disabled = cw.busy;
+    }
+    const go = $('#cw-go'), broke = bankNow() < BETS[0];
+    go.disabled = cw.busy;
+    go.textContent = cw.busy ? 'DEALING...' : broke ? 'REBUY $1,000' : `${cw.state === 'done' ? 'DEAL AGAIN' : 'DEAL'} · ${money(cw.g.bet + cw.g.tie)}`;
+  }
+
+  function fail(e) { cw.busy = false; cw.msg = e.message || String(e); toast(cw.msg); show(); }
+  const later = ms => new Promise(r => setTimeout(r, ms));
+  function draw() { if (!cw.shoe.length) cw.shoe = newShoe(); return cw.shoe.pop(); }
+
+  async function deal() {
+    if (!cw || cw.busy || cw.state === 'tie') return;
+    if (bankNow() < BETS[0]) {   // broke: the same $1,000 rebuy as the other tables
+      try { bank(cw.seat, cw.name, 100000, true); cw.msg = 'A fresh $1,000 - good luck!'; speak('Here is a fresh thousand dollars. Good luck!'); playFx('chip'); show(); } catch (e) { fail(e); }
+      return;
+    }
+    let bet = cw.g.bet, tie = cw.g.tie; const have = bankNow();
+    if (bet + tie > have) {   // bet what there is
+      tie = 0; while (bet > have && BETS.indexOf(bet) > 0) bet = BETS[BETS.indexOf(bet) - 1];
+      if (bet > have) return fail(new Error('Not enough credit.'));
+      cw.g.bet = bet; cw.g.tie = tie; toast('The bet was lowered to what your credit allows.');
+    }
+    if (cw.shoe.length < CUT) { cw.shoe = newShoe(); cw.msg = 'A fresh shoe - six decks shuffled.'; playFx('whoosh'); }
+    try { bank(cw.seat, cw.name, -(bet + tie)); } catch (e) { return fail(e); }
+    cw.busy = true; cw.state = 'deal'; cw.hand = {bet, tie, tieWon: false}; cw.raise = 0; cw.burn = false; cw.wpc = cw.wdc = null; cw.pc = cw.dc = null;
+    cw.out = null; cw.banner = null; cw.msg = '';
+    const g = cw.g; g.hands++; g.wagered += bet + tie;
+    putStats(cw.seat, g);
+    playFx('chip'); show();
+    await later(250); cw.pc = draw(); playFx('knock'); show({first: 'p'});
+    await later(450); cw.dc = draw(); playFx('knock'); show({first: 'd'});
+    await later(500);
+    const p = val(cw.pc), d = val(cw.dc);
+    if (p !== d) {
+      const won = p > d, back = won ? 2 * bet : 0;
+      try { if (back) bank(cw.seat, cw.name, back); } catch (e) { return fail(e); }
+      finish(won, back, `${won ? 'YOU WIN' : 'DEALER WINS'}`, `${cap(RANK[p])} against ${RANK[d]}${won ? ` · pays ${money(bet)}` : ''}${tie ? ' · TIE bet lost' : ''}`);
+      speak(won ? pick([`${cap(RANK[p])} beats ${RANK[d]}. You win!`, `Player wins with the ${RANK[p]}.`]) : pick([`Dealer's ${RANK[d]} beats your ${RANK[p]}.`, `Dealer wins with the ${RANK[d]}.`]));
+      return;
+    }
+    /* a tie */
+    g.ties++;
+    let tieMsg = '';
+    if (tie) {
+      try { bank(cw.seat, cw.name, 11 * tie); } catch (e) { return fail(e); }
+      g.tieWins++; g.returned += 11 * tie; g.biggest = Math.max(g.biggest, 10 * tie);
+      cw.hand.tieWon = true; tieMsg = ` · your TIE bet wins ${money(10 * tie)}`; playFx('win');
+    }
+    putStats(cw.seat, g);
+    cw.state = 'tie'; cw.busy = false;
+    pending({seat: cw.seat, name: cw.name, bet});
+    cw.banner = {big: 'TIE!', sub: `${cap(RANKS[p])} against ${RANKS[d]}${tieMsg}`};
+    cw.msg = 'Go to war, or surrender half?';
+    playFx('push'); show();
+    speak(`${cap(RANKS[p])}! It's a tie${tie ? ', and your tie bet pays ten to one' : ''}. Will you go to war, or surrender?`);
+  }
+
+  async function goWar() {
+    if (!cw || cw.busy || cw.state !== 'tie') return;
+    const bet = cw.hand.bet;
+    try { bank(cw.seat, cw.name, -bet); } catch (e) { return fail(e); }
+    const g = cw.g; g.wars++; g.wagered += bet; putStats(cw.seat, g);
+    cw.busy = true; cw.raise = bet; cw.state = 'war'; cw.banner = {big: 'WAR!', sub: 'three cards burned, then one more card each'}; cw.msg = '';
+    pending({seat: cw.seat, name: cw.name, bet, war: true});
+    speak('I go to war!'); playFx('chip'); show();
+    drumroll();
+    await later(700); cw.burn = true; playFx('whoosh'); show({burn: true});
+    for (let i = 0; i < 6; i++) draw();   // three cards burned for each side
+    await later(800); cw.wpc = draw(); cw.wdc = null; playFx('knock'); show({war: 'p'});
+    await later(700); cw.wdc = draw(); playFx('knock'); show({war: 'd'});
+    await later(450);
+    const p = val(cw.wpc), d = val(cw.wdc);
+    let back = 0, big, sub, won;
+    if (p > d) { back = bet + 2 * bet; won = true; g.warsWon++; big = 'YOU WIN THE WAR!'; sub = `${cap(RANK[p])} beats ${RANK[d]} · raise pays ${money(bet)} · your bet comes back`; }
+    else if (p === d) { back = bet + 3 * bet; won = true; g.warsWon++; g.warTies++; big = 'WAR TIE BONUS!'; sub = `${cap(RANKS[p])} again · raise pays 2 to 1 (${money(2 * bet)}) · your bet comes back`; }
+    else { won = false; big = 'DEALER WINS THE WAR'; sub = `${cap(RANK[d])} beats your ${RANK[p]} · bet and raise lost`; }
+    try { if (back) bank(cw.seat, cw.name, back); } catch (e) { pending(null); return fail(e); }
+    pending(null);
+    cw.out = {done: true, p: p > d, d: d > p, warTie: p === d};
+    settle(won, back);
+    cw.banner = {big, sub, cls: won ? '' : 'lost'};
+    cw.state = 'done'; cw.busy = false; cw.msg = '';
+    if (won) playFx(p === d ? 'big' : 'win'); else playFx('lose');
+    show();
+    speak(p > d ? `${cap(RANK[p])} beats ${RANK[d]}. You win the war!` : p === d ? `Another tie! The war pays two to one!` : `Dealer's ${RANK[d]} wins the war.`);
+  }
+
+  function surrender(thenLeave) {
+    if (!cw || cw.busy || cw.state !== 'tie') return;
+    const bet = cw.hand.bet;
+    try { bank(cw.seat, cw.name, bet / 2); } catch (e) { return fail(e); }
+    pending(null);
+    const g = cw.g; g.surrenders++;
+    settle(false, bet / 2);
+    cw.out = {done: true}; cw.state = 'done';
+    cw.banner = {big: 'SURRENDERED', sub: `half your bet comes back (${money(bet / 2)})`, cls: 'even'};
+    cw.msg = ''; playFx('push'); show();
+    speak('Surrender. Half your bet comes back.');
+    if (thenLeave) leave(true);
+  }
+
+  /* the end of a hand that was not a tie */
+  function finish(won, back, big, sub) {
+    cw.out = {done: true, p: won, d: !won};
+    settle(won, back);
+    cw.banner = {big, sub, cls: won ? '' : 'lost'};
+    cw.state = 'done'; cw.busy = false;
+    playFx(won ? 'win' : 'lose'); show();
+  }
+  function settle(won, back) {   // back = what came back for the main bet and the raise (the tie bet is counted on its own)
+    const g = cw.g;
+    g.returned += back;
+    const profit = back - cw.hand.bet - cw.raise;
+    if (profit > g.biggest) g.biggest = profit;
+    if (won) { g.won++; g.streak++; g.bestStreak = Math.max(g.bestStreak, g.streak); } else { g.lost++; g.streak = 0; }
+    putStats(cw.seat, g);
+  }
+
+  function leave(note) {
+    const was = cw; cw = null; W.cwOn = false; view = '';
+    if (note && was) {   // how the visit went, like the other tables
+      const p = player(was.seat), now = p ? p.bank : 0, net = now - was.b0;
+      if ($('#sess-over')) $('#sess-over').remove();
+      const d = document.createElement('div'); d.id = 'sess-over'; d.className = 'jp-over';
+      const res = net > 0 ? `WON ${money(net)}` : net < 0 ? `LOST ${money(-net)}` : 'BROKE EVEN';
+      d.innerHTML = `<div class="vs-paybox sess-box"><div class="muted">${esc(was.name)} LEFT CASINO WAR</div>
+        <div class="sess-res ${net > 0 ? 'won' : net < 0 ? 'lost' : ''}">${res}</div>
+        <p>at the table &middot; ${Math.max(1, Math.round((Date.now() - was.t0) / 60000))} min &middot; bank now <b>${money(now)}</b></p>
+        <div class="sl-btns"><button id="sess-ok">OK</button></div></div>`;
+      document.body.appendChild(d);
+      $('#sess-ok').onclick = () => d.remove();
+      d.onclick = e => { if (e.target === d) d.remove(); };
+      setTimeout(() => { if (document.body.contains(d)) d.remove(); }, 15000);
+    }
+    if (last) render(last);
+  }
+
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+
+  document.addEventListener('keydown', e => {
+    if (view !== 'war' || !cw || document.activeElement.tagName === 'INPUT' || $('.shc-dlg')) return;
+    if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); if (cw.state === 'tie') goWar(); else deal(); }
+    if ((e.key === 's' || e.key === 'S') && cw.state === 'tie') surrender(false);
+  });
+
+  /* PLAYERS & STATS */
+  W.cwstats = function (p) {
+    const g = load().seats[p.seat];
+    if (!g || g.name !== p.name || !g.hands) return '<h3>CASINO WAR</h3><div class="muted small">Not played yet.</div>';
+    const net = g.returned - g.wagered;
+    return `<h3>CASINO WAR</h3><div class="stats">
+      <span>Hands</span><span>${g.hands}</span>
+      <span>Won / lost</span><span>${g.won} / ${g.lost}</span>
+      <span>Ties</span><span>${g.ties} (TIE bet won ${g.tieWins})</span>
+      <span>Wars</span><span>${g.wars} (won ${g.warsWon}${g.warTies ? `, ${g.warTies} with the tie bonus` : ''}) &middot; surrendered ${g.surrenders}</span>
+      <span>Wagered</span><span>${money(g.wagered)}</span>
+      <span>Paid back</span><span>${g.wagered ? (100 * g.returned / g.wagered).toFixed(1) + '%' : '-'}</span>
+      <span>Net result</span><span>${net > 0 ? '+' : ''}${money(net)}</span>
+      <span>Biggest win</span><span>${money(g.biggest)}</span>
+      <span>Longest winning streak</span><span>${g.bestStreak}</span></div>`;
+  };
+  W.cwOpen = enterSeatPick;
+  W.cwOn = false;
+  W.cwState = () => cw;   // for testing
+})();
+</script>
 </body>
 </html>
